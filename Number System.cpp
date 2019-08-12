@@ -63,6 +63,41 @@ int design()
     }
 }
 
+int checkbin(int n)
+{
+    int i,c;
+    for(i=1;i<20;i++)
+    {
+        c=n%10;
+        if(c!=0 || c!=1)
+        {
+            gotoxy(45,17);
+            cout<<"Please enter a VALID INPUT ! "<<endl;
+            gotoxy(5,26);
+            exit(0);
+        }
+
+    }
+
+
+}
+int checkoct(int n)
+{
+    int i,c;
+    for(i=1;i<20;i++)
+    {
+        c=n%10;
+        if(c==8 || c==9)
+        {
+            gotoxy(45,17);
+            cout<<"Please enter a VALID INPUT ! "<<endl;
+            gotoxy(5,26);
+            exit(0);
+        }
+
+    }
+}
+
 int decToBin(int n)
 {
     int a[25],i;
@@ -261,14 +296,15 @@ int main()
     {
         cin>>num;
     }
-    gotoxy(5,17);
-    cout<<" The Conversion is ===> "<<endl;
+
     b=binToDec(num);
     o=octToDec(num);
     h=hexToDec(val);
     switch(oper)
     {
          case 1 :
+             gotoxy(5,17);
+    cout<<" The Conversion is ===> "<<endl;
              ansbox();
             gotoxy(58,17);
              decToBin(num);
@@ -276,6 +312,8 @@ int main()
          break;
 
         case 2 :
+            gotoxy(5,17);
+    cout<<" The Conversion is ===> "<<endl;
             ansbox();
             gotoxy(58,17);
             decToOct(num);
@@ -283,6 +321,8 @@ int main()
         break;
 
         case 3 :
+            gotoxy(5,17);
+    cout<<" The Conversion is ===> "<<endl;
             ansbox();
             gotoxy(58,17);
             decToHex(num);
@@ -290,24 +330,35 @@ int main()
         break;
 
         case 4 :
+            checkbin(num);
+            gotoxy(5,17);
+    cout<<" The Conversion is ===> "<<endl;
             ansbox();
             gotoxy(58,17);
             cout<<b<<endl;
         break;
 
         case 5 :
+            checkoct(num);
+            gotoxy(5,17);
+    cout<<" The Conversion is ===> "<<endl;
             ansbox();
             gotoxy(58,17);
              cout<<o<<endl;
         break;
 
         case 6 :
+            gotoxy(5,17);
+    cout<<" The Conversion is ===> "<<endl;
             ansbox();
             gotoxy(58,17);
              cout<<h<<endl;
         break;
 
         case 7:
+            checkbin(num);
+            gotoxy(5,17);
+    cout<<" The Conversion is ===> "<<endl;
             ansbox();
             gotoxy(58,17);
             binToOct(num);
@@ -315,6 +366,9 @@ int main()
             break;
 
         case 8 :
+            checkbin(num);
+            gotoxy(5,17);
+    cout<<" The Conversion is ===> "<<endl;
             ansbox();
             gotoxy(58,17);
             binToHex(num);
@@ -322,6 +376,9 @@ int main()
         break;
 
         case 9 :
+            checkoct(num);
+            gotoxy(5,17);
+    cout<<" The Conversion is ===> "<<endl;
             ansbox();
             gotoxy(58,17);
             octToBin(num);
@@ -329,6 +386,9 @@ int main()
         break;
 
         case 10 :
+            checkoct(num);
+            gotoxy(5,17);
+    cout<<" The Conversion is ===> "<<endl;
             ansbox();
             gotoxy(58,17);
             octToHex(num);
@@ -336,6 +396,8 @@ int main()
         break;
 
         case 11 :
+            gotoxy(5,17);
+    cout<<" The Conversion is ===> "<<endl;
             ansbox();
             gotoxy(58,17);
             hexToBin(val);
@@ -343,6 +405,8 @@ int main()
         break;
 
         case 12 :
+            gotoxy(5,17);
+    cout<<" The Conversion is ===> "<<endl;
             ansbox();
             gotoxy(58,17);
             hexToOct(val);
